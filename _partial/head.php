@@ -5,6 +5,7 @@
 
 <!--Connect fonts-->
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <!-- Online -->
 <!--Taken from bootstrap cdn-->
