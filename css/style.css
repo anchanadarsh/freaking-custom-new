@@ -503,3 +503,7 @@ section {
 body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif; }
+
+#section-home1 {
+  background: url(../img/2.jpg) no-repeat;
+  background-size: cover; }

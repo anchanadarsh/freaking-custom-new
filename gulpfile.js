@@ -4,6 +4,15 @@ var minifycss = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
+var imagemin = require('gulp-imagemin');
+
+gulp.task('minifyimg', function () {
+    gulp.src('img/*').pipe(plumber()).pipe(imagemin()).pipe(gulp.dest('dist/img/'));
+});
+
+gulp.task('watchimg', function () {
+    gulp.watch('img/*', ['minifyimg']);
+});
 
 gulp.task('uglifyjs', function () {
     gulp.src('js/*.js').pipe(plumber()).pipe(uglify()).pipe(rename({
@@ -41,5 +50,5 @@ gulp.task('watchcss', function () {
     gulp.watch('css/*.css', ['uglifycss']);
 });
 
-gulp.task('watch', ['watchfonts', 'watchjs', 'watchcss', 'watchsass']);
-gulp.task('default', ['uglifyjs', 'uglifycss', 'sass', 'fonts', 'watch']);
+gulp.task('watch', ['watchfonts', 'watchimg', 'watchjs', 'watchcss', 'watchsass']);
+gulp.task('default', ['uglifyjs', 'uglifycss', 'sass', 'fonts', 'minifyimg', 'watch']);
