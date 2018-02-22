@@ -4,7 +4,7 @@
 <![endif]-->
 
 <!--Connect fonts-->
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 <!-- Online -->
 <!--Taken from bootstrap cdn-->
@@ -14,12 +14,12 @@
 
 <!-- Offline 
 Downloaded from font awesome
-<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="dist/css/font-awesome.min.css" rel="stylesheet"/>
 Downloaded from get bootstrap
-<link href="css/bootstrap.min.css" rel="stylesheet">  -->
+<link href="dist/css/bootstrap.min.css" rel="stylesheet">  -->
 
 <!--Created from custom codes-->
-<link href="css/freaking-custom.css" rel="stylesheet">
+<link href="dist/css/freaking-custom.min.css" rel="stylesheet">
 
 <!--Your custom css code-->
-<link href="css/style.css" rel="stylesheet">
+<link href="dist/css/style.min.css" rel="stylesheet">

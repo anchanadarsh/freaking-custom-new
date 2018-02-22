@@ -1,3 +1,1 @@
-Put all codes which should be on each file.
-<br/>
-Like Navigation, Fixed elements, Copyrights, etc.
+<h3 class="text-center m-none p-xs bg-000 text-fff">Footer</h3>

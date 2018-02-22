@@ -6,9 +6,9 @@
 
 <!-- Offline 
 Downloaded from jquery 
-<script src="js/jquery-1.12.4.min.js"></script>
+<script src="dist/js/jquery-1.12.4.min.js"></script>
 Downloaded from get bootstrap
-<script src="js/bootstrap.min.js"></script> -->
+<script src="dist/js/bootstrap.min.js"></script> -->
 
 <!--Your custom script code-->
-<script src="js/main.js"></script>
+<script src="dist/js/main.min.js"></script>
