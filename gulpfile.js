@@ -5,6 +5,7 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var imagemin = require('gulp-imagemin');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('minifyimg', function () {
     gulp.src('img/*').pipe(plumber()).pipe(imagemin()).pipe(gulp.dest('dist/img/'));
@@ -37,7 +38,7 @@ gulp.task('watchsass', function () {
 });
 
 gulp.task('uglifycss', function () {
-    gulp.src('css/*.css').pipe(plumber()).pipe(minifycss()).pipe(rename({
+    gulp.src('css/*.css').pipe(plumber()).pipe(autoprefixer('last 2 versions')).pipe(minifycss()).pipe(rename({
         suffix: '.min'
     })).pipe(gulp.dest('dist/css/'));
 });
