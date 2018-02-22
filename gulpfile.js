@@ -11,6 +11,14 @@ gulp.task('uglifyjs', function () {
     })).pipe(gulp.dest('dist/js/'));
 });
 
+gulp.task('fonts', function () {
+    gulp.src('fonts/*').pipe(plumber()).pipe(gulp.dest('dist/fonts/'));
+});
+
+gulp.task('watchfonts', function () {
+    gulp.watch('fonts/*', ['fonts']);
+});
+
 gulp.task('sass', function () {
     gulp.src('scss/*.scss').pipe(plumber()).pipe(sass()).pipe(gulp.dest('css/'));
 });
@@ -33,5 +41,5 @@ gulp.task('watchcss', function () {
     gulp.watch('css/*.css', ['uglifycss']);
 });
 
-gulp.task('watch', ['watchjs', 'watchcss', 'watchsass']);
-gulp.task('default', ['uglifyjs', 'uglifycss', 'sass', 'watch']);
+gulp.task('watch', ['watchfonts', 'watchjs', 'watchcss', 'watchsass']);
+gulp.task('default', ['uglifyjs', 'uglifycss', 'sass', 'fonts', 'watch']);
